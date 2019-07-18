@@ -124,6 +124,7 @@ public class Fila extends javax.swing.JFrame {
         this.fila.remove(0);
         labelChamada.setText(nome);
         java.awt.Toolkit.getDefaultToolkit().beep();
+        
 
         
     }//GEN-LAST:event_btnChamarClienteActionPerformed
