@@ -23,20 +23,32 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="labelChamada" max="32767" attributes="0"/>
-                  <Component id="btnChamarCliente" max="32767" attributes="0"/>
-                  <Component id="jSeparator1" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="labelProximo" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jSeparator3" max="32767" attributes="0"/>
+                  <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
+                  <Component id="labelChamada" alignment="1" max="32767" attributes="0"/>
+                  <Component id="btnChamarCliente" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="cpNome" min="-2" pref="260" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                       <Component id="btnIncluirCliente" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="labelProximo" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="labelUltimasChamadas" alignment="0" pref="101" max="32767" attributes="0"/>
+                              <Component id="labelPessoa1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="labelPessoa2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="labelPessoa3" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="labelPessoasFila" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelFilaPessoas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -52,14 +64,30 @@
               <Component id="labelChamada" min="-2" pref="58" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="labelUltimasChamadas" min="-2" pref="14" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+              <Component id="labelPessoa1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="labelPessoa2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="labelPessoa3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="labelPessoasFila" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="labelFilaPessoas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="47" max="32767" attributes="0"/>
+              <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="cpNome" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnIncluirCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnChamarCliente" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -104,6 +132,40 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnChamarClienteActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelUltimasChamadas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xda;ltimas chamadas:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPessoa1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Pessoa1)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPessoa2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Pessoa2)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPessoa3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Pessoa3)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPessoasFila">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pessoas na fila:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelFilaPessoas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Nomes)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator3">
     </Component>
   </SubComponents>
 </Form>

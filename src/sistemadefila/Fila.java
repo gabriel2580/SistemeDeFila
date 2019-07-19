@@ -15,11 +15,14 @@ import java.util.List;
 public class Fila extends javax.swing.JFrame {
 
     private List<String> fila;
-    
+    private int contador = 0;
+
     //criou uma variável com atributo de classe
     public Fila() {
         initComponents();
         this.fila = new LinkedList();
+        this.contador = 0;
+
     }
 
     /**
@@ -37,6 +40,14 @@ public class Fila extends javax.swing.JFrame {
         btnIncluirCliente = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         btnChamarCliente = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        labelUltimasChamadas = new javax.swing.JLabel();
+        labelPessoa1 = new javax.swing.JLabel();
+        labelPessoa2 = new javax.swing.JLabel();
+        labelPessoa3 = new javax.swing.JLabel();
+        labelPessoasFila = new javax.swing.JLabel();
+        labelFilaPessoas = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,23 +78,45 @@ public class Fila extends javax.swing.JFrame {
             }
         });
 
+        labelUltimasChamadas.setText("Últimas chamadas:");
+
+        labelPessoa1.setText("(Pessoa1)");
+
+        labelPessoa2.setText("(Pessoa2)");
+
+        labelPessoa3.setText("(Pessoa3)");
+
+        labelPessoasFila.setText("Pessoas na fila:");
+
+        labelFilaPessoas.setText("(Nomes)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelChamada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnChamarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(labelProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelChamada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnChamarCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                        .addComponent(btnIncluirCliente)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addComponent(btnIncluirCliente))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(labelProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelUltimasChamadas, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                                .addComponent(labelPessoa1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(labelPessoa2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(labelPessoa3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(labelPessoasFila)
+                            .addComponent(labelFilaPessoas))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -95,13 +128,29 @@ public class Fila extends javax.swing.JFrame {
                 .addComponent(labelChamada, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelUltimasChamadas, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(labelPessoa1)
                 .addGap(18, 18, 18)
+                .addComponent(labelPessoa2)
+                .addGap(19, 19, 19)
+                .addComponent(labelPessoa3)
+                .addGap(31, 31, 31)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(labelPessoasFila)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelFilaPessoas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIncluirCliente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnChamarCliente)
-                .addGap(32, 32, 32))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -114,19 +163,42 @@ public class Fila extends javax.swing.JFrame {
     private void btnIncluirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIncluirClienteActionPerformed
         //Incluir o clinte na lista, trim junto com  getText
         String nome = cpNome.getText().trim();
+
         cpNome.setText("");
         this.fila.add(nome);
     }//GEN-LAST:event_btnIncluirClienteActionPerformed
 
     private void btnChamarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChamarClienteActionPerformed
         // chamou o cliente da fila e depois trou assim que foi chamado
-        String nome = this.fila.get(0);
-        this.fila.remove(0);
-        labelChamada.setText(nome);
-        java.awt.Toolkit.getDefaultToolkit().beep();
-        
 
-        
+        if (this.fila.size() > 0) {
+            String nome = this.fila.get(0);
+
+            this.fila.remove(0);
+            labelChamada.setText(nome);
+
+            contador++;
+            if (contador == 1) {
+                labelPessoa1.setText(nome);
+            }
+            if (contador == 2) {
+                labelPessoa2.setText(nome);
+            }
+            if (contador == 3) {
+                labelPessoa3.setText(nome);
+                contador = 0;
+            }
+            java.awt.Toolkit.getDefaultToolkit().beep();
+            String FilaPessoas = "";
+            
+            for (int i = 0; i < this.fila.size(); i++) {
+                FilaPessoas = FilaPessoas + "," + this.fila.get(i);
+
+            }
+               labelFilaPessoas.setText(FilaPessoas);
+        }
+
+
     }//GEN-LAST:event_btnChamarClienteActionPerformed
 
     /**
@@ -169,7 +241,15 @@ public class Fila extends javax.swing.JFrame {
     private javax.swing.JButton btnIncluirCliente;
     private javax.swing.JTextField cpNome;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel labelChamada;
+    private javax.swing.JLabel labelFilaPessoas;
+    private javax.swing.JLabel labelPessoa1;
+    private javax.swing.JLabel labelPessoa2;
+    private javax.swing.JLabel labelPessoa3;
+    private javax.swing.JLabel labelPessoasFila;
     private javax.swing.JLabel labelProximo;
+    private javax.swing.JLabel labelUltimasChamadas;
     // End of variables declaration//GEN-END:variables
 }
